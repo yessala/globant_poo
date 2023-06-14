@@ -55,5 +55,11 @@ public class ServiciosOperaciones {
 		System.out.println("La producto de " + n1.getNum1() + " por " + n2.getNum2() + " es " + (n1.getNum1()*n2.getNum2()));
 	}
 	
-
+	public void dividir(Operacion n1, Operacion n2) {
+		if (n1.getNum1()==0 || n2.getNum2() == 0) {
+			System.out.println("El resultado es 0, no se puede dividir por cero.");
+		} else 
+		System.out.println("La división de " + n1.getNum1() + " por " + n2.getNum2() + " es " + (n1.getNum1()/n2.getNum2()) + ".");
+	}
+	
 }

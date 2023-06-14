@@ -12,6 +12,7 @@ public class Principal {
 		so.sumar(op, op);
 		so.restar(op, op);
 		so.multiplicar(op, op);
+		so.dividir(op, op);
 		
 	}
 }
