@@ -39,11 +39,11 @@ public class ServiciosOperaciones {
 	
 	public void sumar(Operacion n1, Operacion n2) {
 		
-		System.out.println("La suma de " + n1.getNum1() + " y " + n2.getNum2() + " es " + n1.getNum1()+n2.getNum2());
+		System.out.println("La suma de " + n1.getNum1() + " y " + n2.getNum2() + " es " + (n1.getNum1()+n2.getNum2()));
 	}
 	
-//	public void restar(Operacion n1, Operacion n2) {
-//		System.out.println("La resta de " + n1 + " menos " + n2 + " es " + n1 - n2);
-//	}
+	public void restar(Operacion n1, Operacion n2) {
+		System.out.println("La resta de " + n1.getNum1() + " menos " + n2.getNum2() + " es " + (n1.getNum1()-n2.getNum2()));
+	}
 	
 }
