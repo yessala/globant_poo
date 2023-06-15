@@ -2,13 +2,6 @@ package entidad;
 
 import java.util.Scanner;
 
-//Realizar una clase llamada Cuenta (bancaria) que debe tener como mínimo los atributos:
-//numeroCuenta (entero), el DNI del cliente (entero largo) y el saldo actual (entero).
-//Las operaciones asociadas a dicha clase son:
-//a) Constructor por defecto y constructor con DNI, saldo, número de cuenta e interés.
-//b) Agregar los métodos getters y setters correspondientes
-
-
 /**
  * @author yessa
  *
@@ -17,6 +10,7 @@ public class Cuenta {
 	
 	//atributos del objeto
 	private int numeroCta;
+	private String nombre;
 	private int dni;
 	private int saldoActual;
 	
@@ -26,8 +20,9 @@ public class Cuenta {
 		
 	}
 
-	public Cuenta(int numeroCta, int dni, int saldoActual) {
+	public Cuenta(int numeroCta, String nombre, int dni, int saldoActual) {
 		this.numeroCta = numeroCta;
+		this.nombre = nombre;
 		this.dni = dni;
 		this.saldoActual = saldoActual;
 	}
@@ -40,8 +35,16 @@ public class Cuenta {
 	public void setNumeroCta(int numeroCta) {
 		this.numeroCta = numeroCta;
 	}
-
-	public long getDni() {
+	
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	
+	public int getDni() {
 		return dni;
 	}
 
@@ -84,17 +87,31 @@ public class Cuenta {
 			this.saldoActual -= retiro;
 		}
 	}
+
 	
-	//g) Método consultarSaldo(): permitirá consultar el saldo disponible en la cuenta.
-	//h) Método consultarDatos(): permitirá mostrar todos los datos de la cuenta 
+
+	public void consultarSaldo() {
+		
+		System.out.println("Su saldo Actual es " + this.saldoActual);
+		
+	}
 	
-	public 
-	
+	public void consultarDatos() {
+		
+		System.out.println("Su numero de cuenta es");
+		System.out.println(this.numeroCta);
+		System.out.println("Su Nombre registrado es");
+		System.out.println(this.nombre);
+		System.out.println("Su DNI");
+		System.out.println(this.dni);
+	}
+
 	//toString
 	@Override
 	public String toString() {
-		return "Cuenta [numeroCta=" + numeroCta + ", dni=" + dni + ", saldoActual=" + saldoActual + "]";
+		return "Cuenta [numeroCta=" + numeroCta + ", nombre=" + nombre + ", dni=" + dni + ", saldoActual=" + saldoActual
+				+ "]";
 	}
-	
+
 	
 }
