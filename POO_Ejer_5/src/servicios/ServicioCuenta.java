@@ -14,7 +14,7 @@ public class ServicioCuenta {
 			System.out.println("Ingrese número de cuenta");
 			c.setNumeroCta(leer.nextInt());
 			System.out.println("Ingrese su nombre");
-			c.setNombre(leer.nextLine());
+			c.setNombre(leer.next());
 			System.out.println("Ingrese su DNI");
 			c.setDni(leer.nextInt());
 			

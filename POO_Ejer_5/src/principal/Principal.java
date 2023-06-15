@@ -10,9 +10,14 @@ public class Principal {
 		ServicioCuenta sc = new ServicioCuenta();
 		Cuenta c = sc.crearCuenta();
 		
-		System.out.println(c);
+		c.ingresar(5000);
+		c.retirar(250);
+		
+		
+		c.consultarSaldo();
 		
 		
 	}
+	
 
 }
