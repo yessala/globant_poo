@@ -14,7 +14,7 @@ public class Principal {
 		c.retirar(250);
 		
 		c.extraccionRapida();
-		
+	
 		
 		
 	}
