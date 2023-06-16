@@ -15,8 +15,8 @@ public class Calculo {
 		
 		Persona p = sp.crearPersona();
 		
+		System.out.println(sp.esMayor(p));
 		System.out.println(p);
-		
 	}
 
 }
