@@ -13,8 +13,8 @@ public class Principal {
 		c.ingresar(5000);
 		c.retirar(250);
 		
+		c.extraccionRapida();
 		
-		c.consultarSaldo();
 		
 		
 	}
