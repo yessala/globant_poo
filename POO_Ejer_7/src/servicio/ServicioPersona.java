@@ -1,4 +1,9 @@
 package servicio;
+
+import java.util.Scanner;
+
+import entidad.Persona;
+
 // Metodo crearPersona(): el método crear persona, le pide los valores de los atributos
 //al usuario y después se le asignan a sus respectivos atributos para llenar el objeto
 //Persona. Además, comprueba que el sexo introducido sea correcto, es decir, H, M o
@@ -16,4 +21,39 @@ package servicio;
  */
 public class ServicioPersona {
 
+	private Scanner leer = new Scanner(System.in);
+	
+	public Persona crearPersona() {
+		
+		Persona p = new Persona();
+//		private String nombre;
+//		private int edad;
+//		//sexo like a char M (mujer), H (homre), O (otro)
+//		private String sexo;
+//		private double peso;
+//		private double altura;
+		System.out.println("Ingrese su nombre");
+		p.setNombre(leer.nextLine());
+		System.out.println("Ingrese su edad");
+		p.setEdad(leer.nextInt());
+		leer.nextLine();
+		System.out.println("Ingrese su sexo siendo M (mujer) H (hombre) O (otro)");
+		p.setSexo(leer.nextLine());
+		System.out.println("Ingrese su peso");
+		p.setPeso(leer.nextDouble());
+		System.out.println("Ingrese su altura");
+		p.setAltura(leer.nextDouble());
+		
+		return p;
+	}
+
+
+
+
+
+
+
+
+
 }
+
