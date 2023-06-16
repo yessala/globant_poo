@@ -32,7 +32,15 @@ public class Nespresso {
 		ServicioNespresso sn = new ServicioNespresso();
 		Cafetera c = sn.crearCafetera();
 		
-		System.out.println(c);
+	
+		c.agregarCafe(); 
+		
+		c.servitTaza();
+		
+		System.out.println("actualmente hay " + c.getCantidadActual() + " de café");
+		System.out.println("");
+		
+		
 
 	}
 
