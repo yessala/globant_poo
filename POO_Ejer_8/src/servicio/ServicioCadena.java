@@ -36,21 +36,23 @@ public class ServicioCadena {
 	//h) Método contiene(String letra), deberá comprobar si la frase contiene una letra que
 	//ingresa el usuario y devuelve verdadero si la contiene y falso si no.
 	
-//	public void mostrarVocales(Cadena letra, Cadena largo) {
-//		
-//		for (int i = 0; i < largo.getLongitud() ; i++) {
-//			char vocal = letra.getFrase().charAt(i) ;
-//			
-//			switch (vocal) {
-//			case "a", "e", "i", "o", "u":
-//				int contar += contar;
-//				break;
-//
-//			default:
-//				break;
-//			}
-//			
-//		}
-//		
-//	}
+	public void mostrarVocales(Cadena letra, Cadena largo) {
+		int sumar = 0;
+		for (int i = 0; i < largo.getLongitud() ; i++) {
+			char vocal = letra.getFrase().charAt(i) ;
+			
+			switch (vocal) {
+			case 'a':
+			case 'e': 
+			case 'i': 
+			case 'o': 
+			case 'u':
+				sumar += 1;
+				break;
+			default:
+				break;
+			}
+		}
+		System.out.println("En la frase hay " + sumar + " vocales");
+	}
 }

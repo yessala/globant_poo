@@ -13,6 +13,8 @@ public class Frase {
 		Cadena f = sf.crearCadena();
 		
 		System.out.println(f);
+		System.out.println();
+		sf.mostrarVocales(f, f);
 		
 
 	}
