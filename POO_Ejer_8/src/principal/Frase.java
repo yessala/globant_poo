@@ -11,14 +11,22 @@ public class Frase {
 		
 		ServicioCadena sf = new ServicioCadena();
 		Cadena f = sf.crearCadena();
-		
+		System.out.println();
 		System.out.println(f);
 		System.out.println();
-		sf.mostrarVocales(f, f);
+		sf.mostrarVocales(f);
 		System.out.println();
-		sf.vecesRepetido(f, f);
-		
-
+		sf.vecesRepetido(f);
+		System.out.println();
+		sf.invertirFrase(f);
+		System.out.println();
+		sf.compararLongitud(f);
+		System.out.println();
+		sf.unirFrases(f);
+		System.out.println();
+		sf.reemplazar(f);
+		System.out.println();
+		System.out.println(sf.contiene(f));
 	}
 	
 	
