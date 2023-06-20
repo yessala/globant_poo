@@ -14,11 +14,19 @@ import entidad.Persona;
  *
  */
 public class ServicioPersona {
-
-	private Scanner leer = new Scanner(System.in);
+	private double imc;
 	
+	public void setImc(double imc) {
+		this.imc = imc;
+	}
+	public double getImc() {
+		return imc;
+	}
+	
+	private Scanner leer = new Scanner(System.in);
+
 	public Persona crearPersona() {
-		
+
 		Persona p = new Persona();
 
 		System.out.println("Ingrese su nombre");
@@ -29,23 +37,25 @@ public class ServicioPersona {
 		System.out.println("Ingrese su sexo siendo M (mujer) H (hombre) O (otro)");
 		//toUpperCase para transformar el string recibido a myuscula
 		p.setSexo(leer.nextLine().toUpperCase());
-			//verificación que el sexo ingresado sea en el formato correcto
-			if (p.getSexo().equals("M") || p.getSexo().equals("H") || p.getSexo().equals("O")) {
-				System.out.println("Ingrese su peso");
-				p.setPeso(leer.nextDouble());
-				System.out.println("Ingrese su altura");
-				p.setAltura(leer.nextDouble());
-			} else if (!p.getSexo().equals("M") && !p.getSexo().equals("H") && !p.getSexo().equals("O")){
+		//verificación que el sexo ingresado sea en el formato correcto
+		if (p.getSexo().equals("M") || p.getSexo().equals("H") || p.getSexo().equals("O")) {
+			System.out.println("Ingrese su peso");
+			p.setPeso(leer.nextDouble());
+			System.out.println("Ingrese su altura");
+			p.setAltura(leer.nextDouble());
+			leer.nextLine();
+		} else if (!p.getSexo().equals("M") && !p.getSexo().equals("H") && !p.getSexo().equals("O")){
 			p.setSexo(null); //iguala a null el sexo porq no es el formato pedido
 			System.out.println("El formato no es correcto");
 			System.out.println("Ingrese su peso");
 			p.setPeso(leer.nextDouble());
 			System.out.println("Ingrese su altura");
 			p.setAltura(leer.nextDouble());
-			}
+			leer.nextLine();
+		}
 		return p;
-	
-	
+
+
 	}
 
 	// Método calcularIMC(): calculara si la persona está en su peso ideal (peso en
@@ -55,23 +65,23 @@ public class ServicioPersona {
 	//persona está en su peso ideal y la función devuelve un 0. Finalmente, si el resultado
 	//de la fórmula es un valor mayor que 25 significa que la persona tiene sobrepeso, y la
 	//función devuelve un 1.
-	
+
 	public void calcullarIMC(Persona p, Persona a) {
-		
-		double imc = 0;
-		
+		//verifiando que la altura este en metros
 		if (a.getAltura() > 3) {
 			a.setAltura(a.getAltura()/100);
-			
 			imc = (p.getPeso() / (a.getAltura()*a.getAltura()));
-					
 		} else if (a.getAltura() < 3) {
-			
-			imc = (p.getPeso() / (a.getAltura()*a.getAltura()));
-		
-	}
-		
-		System.out.println("El imc calculado es " + imc);
+			imc = (p.getPeso() / (a.getAltura()*a.getAltura()));		
+		}
+		//mensaje de respuesta epara el main
+		if (imc < 20) {
+			System.out.println("-1"); //indica por debajo del peso ideal
+		} else if (imc >= 20 && imc <= 25) {
+			System.out.println("0"); //Indica ue esta en el peso ideal
+		} else if (imc > 25) {
+			System.out.println("1"); //Indica sobrepeso
+		}
 	}
 
 
@@ -85,8 +95,10 @@ public class ServicioPersona {
 			return false;
 	}
 
+	}
 
 
 
-}
+
+
 
