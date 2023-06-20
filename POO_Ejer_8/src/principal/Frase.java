@@ -15,6 +15,8 @@ public class Frase {
 		System.out.println(f);
 		System.out.println();
 		sf.mostrarVocales(f, f);
+		System.out.println();
+		sf.vecesRepetido(f, f);
 		
 
 	}

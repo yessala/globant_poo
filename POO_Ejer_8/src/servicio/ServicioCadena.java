@@ -19,8 +19,7 @@ public class ServicioCadena {
 		
 		}
 		
-	//a) Método mostrarVocales(), deberá contabilizar la cantidad de vocales que tiene la
-	//frase ingresada.
+
 	//b) Método invertirFrase(), deberá invertir la frase ingresada y mostrarla por pantalla. Por
 	//ejemplo: Entrada: "casa blanca", Salida: "acnalb asac".
 	//c) Método vecesRepetido(String letra), recibirá un carácter ingresado por el usuario y
@@ -36,10 +35,11 @@ public class ServicioCadena {
 	//h) Método contiene(String letra), deberá comprobar si la frase contiene una letra que
 	//ingresa el usuario y devuelve verdadero si la contiene y falso si no.
 	
+	//método que muestra cuantas vocales hay en la frase
 	public void mostrarVocales(Cadena letra, Cadena largo) {
 		int sumar = 0;
 		for (int i = 0; i < largo.getLongitud() ; i++) {
-			char vocal = letra.getFrase().charAt(i) ;
+			char vocal = letra.getFrase().toLowerCase().charAt(i) ;
 			
 			switch (vocal) {
 			case 'a':
@@ -55,4 +55,44 @@ public class ServicioCadena {
 		}
 		System.out.println("En la frase hay " + sumar + " vocales");
 	}
+
+	//método
+	public void vecesRepetido(Cadena letra, Cadena largo) {
+		int sumara = 0;
+		int sumare = 0;
+		int sumari = 0;
+		int sumaro = 0;
+		int sumaru = 0;
+		
+		
+		
+		for (int i = 0; i < largo.getLongitud() ; i++) {
+			char vocal = letra.getFrase().toLowerCase().charAt(i) ;
+			
+			switch (vocal) {
+			case 'a':
+				sumara += 1;
+				break;
+			case 'e': 
+				sumare += 1;
+				break;
+			case 'i': 
+				sumari += 1;
+				break;
+			case 'o':
+				sumaro += 1;
+				break;
+			case 'u':
+				sumaru += 1;
+				break;
+			default:
+				break;
+			}
+		}
+		System.out.println("En la frase hay " + sumara + " letra/s a, " + sumare + " letra/s e, " + sumari + " letra/s "
+				+ "i, " + sumaro + " letra/s o y " + sumaru + " letra/s u");
+	}
+
 }
+
+
