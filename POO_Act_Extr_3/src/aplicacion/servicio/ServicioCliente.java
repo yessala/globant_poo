@@ -28,18 +28,19 @@ public class ServicioCliente {
 	public void menu() {
 		int option;
 		do {
-			System.out.println("Seleccione una opción");
+			System.out.println("Menú Cliente\nSeleccione una opción");
 			System.out.println(
-					"1. Crear y registrar clientes\n2. Mostrar clientes\n3. Actualizar datos de clientes\n4. Eliminar cliente\n5. Salir");
+					"1. Crear y registrar clientes\n2. Mostrar clientes\n3. Actualizar datos de clientes\n4. Eliminar cliente\n5. Volver al menu principal");
 			System.out.print("Opcion: ");
 			option = leer.nextInt();
+			System.out.println();
 
 			switch (option) {
 			case 1 -> registrarCliente();
 			case 2 -> obtenerCliente();
 			case 3 -> actualizarCliente();
 			case 4 -> eliminarCliente();
-			case 5 -> System.out.println("Gracias por visitarnos.");
+			case 5 -> System.out.println();
 			default -> System.out.println("La opción seleccionada no es válida");
 			}
 			
@@ -92,25 +93,25 @@ public class ServicioCliente {
 				case 1:
 					System.out.println(clientList.get(i).getNombre() + ", Ingrese el nuevo nombre");
 					clientList.get(i).setNombre(leer.nextLine());
-					System.out.println("Su nombre ha sido actualiado con éxito a " + clientList.get(i).getNombre());
+					System.out.println("El nombre ha sido actualizado con éxito a " + clientList.get(i).getNombre());
 					System.out.println();
 					break;
 				case 2:
 					System.out.println(clientList.get(i).getNombre() + ", Ingrese la nueva altura");
 					clientList.get(i).setAltura(leer.nextInt());
-					System.out.println("Su altura ha sido actualiado con éxito a " + clientList.get(i).getAltura());
+					System.out.println("La altura ha sido actualizada con éxito a " + clientList.get(i).getAltura());
 					System.out.println();
 					break;
 				case 3:
 					System.out.println(clientList.get(i).getNombre() + ", Ingrese el nuevo peso");
 					clientList.get(i).setPeso(leer.nextInt());
-					System.out.println("Su peso ha sido actualiado con éxito a " + clientList.get(i).getPeso());
+					System.out.println("El peso ha sido actualizado con éxito a " + clientList.get(i).getPeso());
 					System.out.println();
 					break;
 				case 4:
 					System.out.println(clientList.get(i).getNombre() + ", Ingrese el nuevo objeto");
 					clientList.get(i).setObjetivo(leer.nextLine());
-					System.out.println("Su nombre ha sido actualiado con éxito a " + clientList.get(i).getObjetivo());
+					System.out.println("El objetivo ha sido actualizado con éxito a " + clientList.get(i).getObjetivo());
 					System.out.println();
 
 				default:
