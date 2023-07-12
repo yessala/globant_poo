@@ -4,7 +4,6 @@
 package aplicacion;
 
 import aplicacion.servicio.ServicioCliente;
-import aplicacion.entidad.Cliente;
 
 /**
  * @author yessa
@@ -17,7 +16,7 @@ public class Gimnasio {
 		
 		ServicioCliente sc = new ServicioCliente();
 		
-	
+		sc.menu();
 		
 	}
 	
